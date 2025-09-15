@@ -1,0 +1,39 @@
+title: Jonatan's Blog
+email:
+description: >-
+  A simple Jekyll blog powered by GitHub Pages
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://jhilmarch.github.io/" # the base hostname & protocol for your site
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Render posts with future dates (useful during drafting)
+future: true
+
+# Minima theme settings
+author: Jonatan Hilmarch
+minima:
+  social_links:
+    - { platform: github, user_url: "https://github.com/JHilmarch" }
+
+# Excludes and caches
+exclude:
+  - README.md
+  - flake.nix
+  - flake.lock
+  - .junie/
+  - .github/
+  - Gemfile.lock
+
+# Caching directories that shouldn't be in the site build
+collections:
+  posts:
+    output: true
+
+markdown: kramdown
+kramdown:
+  input: GFM

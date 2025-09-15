@@ -1,0 +1,18 @@
+# Build output
+_site/
+
+# Ruby bundle artifacts
+.bundle/
+
+# Node artifacts
+node_modules/
+
+# Locks and vendored files we don't want to reformat
+Gemfile.lock
+flake.lock
+vendor/
+
+# Misc
+.git/
+
+flake.nix

@@ -1,0 +1,28 @@
+# Prettier configuration for this Jekyll site
+# Focus: Markdown, HTML, YAML
+# General defaults (aligned with .editorconfig max_line_length = 120)
+printWidth: 120
+tabWidth: 2
+useTabs: false
+singleQuote: true
+bracketSpacing: true
+semi: true
+proseWrap: preserve
+htmlWhitespaceSensitivity: css
+endOfLine: lf
+overrides:
+  # Markdown: wrap prose at 120 columns to match MD013 and .editorconfig
+  - files: "*.md"
+    options:
+      proseWrap: always
+      printWidth: 120
+  # HTML: rely on CSS-like whitespace sensitivity (default), no special rules
+  - files: "*.html"
+    options:
+      htmlWhitespaceSensitivity: css
+  # YAML: keep quotes minimal and stable; Prettier handles quoting automatically
+  - files:
+      - "*.yml"
+      - "*.yaml"
+    options:
+      singleQuote: false # YAML typically favors double quotes when needed
